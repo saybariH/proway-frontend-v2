@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Lufga';
+    src: url('/font/Lufga-Medium.eot'),
+        url('/font/Lufga-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/font/Lufga-Medium.woff2') format('woff2'),
+        url('/font/Lufga-Medium.woff') format('woff'),
+        url('/font/Lufga-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lufga';
+    src: url('/font/Lufga-Bold.eot');
+    src: local('Lufga Bold'), local('Lufga-Bold'),
+        url('/font/Lufga-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/font/Lufga-Bold.woff2') format('woff2'),
+        url('/font/Lufga-Bold.woff') format('woff'),
+        url('/font/Lufga-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
