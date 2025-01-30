@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Pagination } from "./Pagination";
 import { GuestRow } from "./GuestRow";
 
@@ -110,8 +110,8 @@ const InvitationManagement: React.FC = () => {
         setSelectedGuests(newSelected);
     };
     return (
-        <div className="justify-self-center m-6">
-            <div className="max-w-[1414px] max-h-[698px] flex flex-col justify-between pt-10 shadow-md bg-[#ECFEE2] bg-opacity-30 rounded-[40px]">
+        <div className="justify-self-center ">
+            <div className="w-full h-full flex flex-col justify-between pt-10 shadow-md bg-[#ECFEE2] bg-opacity-30 rounded-[40px]">
                 <div className="flex flex-wrap gap-8 items-start self-center max-w-[1414px]">
                     <div className="flex flex-wrap gap-5 items-start min-w-[240px] w-[870px] max-md:max-w-full">
                         <div className="flex gap-2.5 justify-center items-center px-2.5 bg-white  h-[55px] min-h-[55px] rounded-[50px] w-[55px]">
@@ -135,7 +135,7 @@ const InvitationManagement: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-1 shrink gap-2.5 justify-center items-center px-8 py-3.5 text-lg rounded-3xl basis-0 bg-[#7C829C] bg-opacity-10 min-h-[55px] min-w-[240px] text-[#7C829C] max-md:px-5">
+                    <div className="flex flex-1 shrink gap-2.5 justify-center items-center px-8 py-3.5 text-lg rounded-3xl basis-0 bg-[#7C829C] bg-opacity-10  text-[#7C829C] max-md:px-5">
                         <img
                             loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/8060010b074a8743ace297e6bee2264fa4147d5818f58f476d04f3c3d932178b?placeholderIfAbsent=true&apiKey=c954eb84ba4d40a9a189795a2cb391b3"
