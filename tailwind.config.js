@@ -10,7 +10,7 @@ export default {
       colors: {
          primary: "#2139EE",
          secondary:"#090933",
-        'bg-light':"#F0F1FC",
+        'bg-light':"#F4F9FF",
         'bg-blue':'#E0EEFF',
         'bg-green':'#DEF4F0',
         'bg-orange':'#FFD9BF',
@@ -20,11 +20,11 @@ export default {
          red: '#FC5185',
          orange: '#EC8200'
       },
-      width : {
-        '1728': '1728px',
-        '1412': '1412px',
-        '1352': '1352px'
-      }
+        width: {
+          'custom': '1728px',
+          'sidebar': '20%',  
+          'content': '80%',
+        },
     },
   },
   plugins: [

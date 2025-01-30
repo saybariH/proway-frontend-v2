@@ -3,6 +3,9 @@ import { FaRegEye } from "react-icons/fa";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { HiOutlinePresentationChartLine } from "react-icons/hi";
+import { IoMdAdd } from "react-icons/io";
+import { FaUsers } from "react-icons/fa";
+import { BiBarChartAlt2 } from "react-icons/bi";
 
 type Card = {
     id: number;
@@ -14,6 +17,7 @@ type Card = {
 
 const Projects: React.FC = () => {
     const [stars, setStars] = useState<boolean[]>([]);
+    const [searchQuery, setSearchQuery] = useState("");
 
     const cards: Card[] = [
         {
@@ -21,58 +25,70 @@ const Projects: React.FC = () => {
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 2,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'In Progress',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 3,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 4,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 5,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 6,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 7,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
         {
             id: 8,
             name: 'Samad BENBOU',
             position: 'Sr. Product Designer, 3D Artist',
             status: 'Completed',
-            imageSrc: '../../src/assets/images/image.png',
+            imageSrc: '../../src/assets/images/profile-img.png',
         },
     ];
+
+    const filteredProjects = cards?.filter((project: Card) => {
+        const fullName = `${project.name}`.toLowerCase();
+        const query = searchQuery.toLowerCase();
+
+        // Match full name, individual names, or email/domain
+        return fullName.includes(query) ||
+               project.name.toLowerCase().includes(query)
+               //email.includes(query)
+    });
+
+    
 
     // Handle toggle for each card's star button
     const handleToggle = (index: number) => {
@@ -82,38 +98,60 @@ const Projects: React.FC = () => {
     };
 
     return (
-        <section className="w-full bg-[#ffffff] h-[875px] max-w-1412 rounded-[40px] p-[30px]">
+        <>
+        <div className='w-full flex'>
+            <div className='hidden md:block w-sidebar mt-[27px] ml-[40px]'>
+                <img className='max-w-[221px] max-h-[75px] mb-[123px]' src="../../src/assets/images/Proway-logo.png"/>
+                <button className='font-lufga flex items-center w-[142px] gap-[10px] justify-center bg-primary py-4 px-5 mb-[123px] rounded-[20px] text-white'>
+                    <IoMdAdd className='w-[28px] h-[28px]'/>
+                    <span className='text-[20px]'>Create</span>
+                </button>
+                <div className='flex flex-col gap-[10px]'>
+                    <button className='flex bg-white items-center justify-center w-[55px] h-[55px] rounded-full'>
+                        <HiOutlinePresentationChartLine className='w-[28px] h-[28px] text-primary'/>
+                    </button>
+                    <button className='flex bg-white items-center justify-center w-[55px] h-[55px] rounded-full'>
+                        <FaUsers className='w-[28px] h-[28px] text-primary'/>
+                    </button>
+                    <button className='flex bg-white items-center justify-center w-[55px] h-[55px] rounded-full'>
+                        <BiBarChartAlt2 className='w-[28px] h-[28px] text-primary' />
+                    </button>
+                </div>
+            </div>
 
-            <div className="w-full max-w-1352 flex items-center justify-between">
+        <div className="w-full sm:w-content bg-white h-full rounded-[40px] p-[20px] md:p-[30px] md:mx-8 mt-5">
+                <div className="max-w-[1352px] flex flex-col md:flex-row items-center justify-between">
                 <div className="flex items-start gap-[20px] justify-center">
-                    <div className='flex bg-gray-100 items-center justify-center rounded-full p-3 h-[55px] w-[55px]'>
+                    <div className='flex bg-gray-100 items-center justify-center rounded-full p-3 max-h-[55px] max-w-[55px]'>
                         <HiOutlinePresentationChartLine className="text-primary w-[27px] h-[27px]" />
                     </div>
                     <div>
                         <h1 className="font-lufga text-[26px] font-bold text-secondary mb-2">
                             Projects Tracking
                         </h1>
-                        <p className="font-lufga text-[16px] w-[412px] text-secondary">
+                        <p className="font-lufga text-[16px] max-w-[412px] text-secondary">
                             Review your clients' projects and discover their progress.
                         </p>
                     </div>
                 </div>
 
-                <div className="relative max-w-md">
+                <div className="relative">
                     <IoSearch className="w-[27px] h-[27px] absolute left-7 top-1/2 transform -translate-y-1/2 text-primary dark:text-primary" />
                     <input
                         type="text"
                         placeholder="Search by name, email"
-                        className="font-lufga text-[18px] text-gray-200 w-[370px] h-[55px] pl-16 rounded-[15px] border-none focus:outline-none bg-gray-100"
+                        value={searchQuery}
+                        onChange={(e)=>setSearchQuery(e.target.value)}
+                        className="w-full max-w-[370px] h-[55px] font-lufga text-[18px] text-gray-200 pl-16 rounded-[15px] border-none focus:outline-none bg-gray-100"
                     />
                 </div>
             </div>
 
-            <div className='w-full max-w-1352 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 mt-5 gap-[20px]'>
-                {cards.map((card, index) => (
+            <div className='w-full flex flex-row flex-wrap mt-5 gap-[20px]'>
+                {filteredProjects.map((card, index) => (
                     <div
                         key={card.id}
-                        className='flex flex-col font-lufga text-center w-[323px] border border-gray-300 hover:bg-bg-light rounded-[20px] h-[322px] p-5'
+                        className='w-full flex flex-col font-lufga text-center max-w-[323px] border border-gray-300 hover:bg-bg-light rounded-[20px] h-full p-5'
                     >
                         <div className='flex justify-between'>
                             <button
@@ -173,14 +211,16 @@ const Projects: React.FC = () => {
                             <span className='text-[10px]'>74% Completed</span>
                         </div>
 
-                        <div className='font-lufga flex items-center bg-gray-100 mx-auto text-primary rounded-[5px] mt-4 w-[165px] h-[22px] gap-[5px] pl-2'>
+                        <div className='w-full max-w-[165px] font-lufga flex items-center bg-gray-100 mx-auto text-primary rounded-[5px] mt-4 gap-[5px] pl-2'>
                             <MdOutlineAccessTime className='w-[13px]' />
                             <span className='text-[10px]'>Last updated: 15 Jan, 2025</span>
                         </div>
                     </div>
                 ))}
             </div>
-        </section>
+        </div>
+        </div>
+        </>
     );
 };
 
