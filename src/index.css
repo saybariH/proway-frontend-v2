@@ -4,8 +4,7 @@
 
 @font-face {
     font-family: 'Lufga';
-    src: url('/font/Lufga-Medium.eot'),
-        url('/font/Lufga-Medium.eot?#iefix') format('embedded-opentype'),
+    src:url('/font/Lufga-Medium.eot?#iefix') format('embedded-opentype'),
         url('/font/Lufga-Medium.woff2') format('woff2'),
         url('/font/Lufga-Medium.woff') format('woff'),
         url('/font/Lufga-Medium.ttf') format('truetype');
@@ -21,5 +20,14 @@
         url('/font/Lufga-Bold.woff') format('woff'),
         url('/font/Lufga-Bold.ttf') format('truetype');
     font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lufga';
+    src: url('/font/Lufga-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/font/Lufga-Regular.woff2') format('woff2'),
+        url('/font/Lufga-Regular.woff') format('woff'),
+        url('/font/Lufga-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
