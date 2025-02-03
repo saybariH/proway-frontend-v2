@@ -141,18 +141,17 @@ const Projects: React.FC = () => {
             imageSrc: '../../src/assets/images/profile-img.png',
         },
     ];
-    const currentProjects = cards.slice(indexOfFirstGuest, indexOfLastGuest);
 
-
-    const filteredProjects = currentProjects?.filter((project: Card) => {
-        const fullName = `${project.name}`.toLowerCase();
+    const filteredProjects = cards.filter((project: Card) => {
+        const fullName = project.name.toLowerCase();
         const query = searchQuery.toLowerCase();
-
-        // Match full name, individual names, or email/domain
-        return fullName.includes(query) ||
-            project.name.toLowerCase().includes(query)
-        //email.includes(query)
+        return fullName.includes(query);
     });
+    
+    // Apply pagination AFTER filtering
+    const totalPages = Math.ceil(filteredProjects.length / guestsPerPage);
+    const paginatedProjects = filteredProjects.slice(indexOfFirstGuest, indexOfLastGuest);
+    
     // Handle toggle for each card's star button
     const handleToggle = (index: number) => {
         const newStars = [...stars];
@@ -190,11 +189,11 @@ const Projects: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="w-full h-screen">
-                    {filteredProjects.length === 0 ?
+                <div className="w-full">
+                    {paginatedProjects.length === 0 ?
                         <div className='flex flex-col items-center justify-center h-screen'>
                             <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_574_28401)">
+                                <g clipPath="url(#clip0_574_28401)">
                                     <path d="M48.7355 7.2644C49.3465 7.2644 49.9326 7.50715 50.3647 7.93923C50.7967 8.37131 51.0395 8.95735 51.0395 9.5684C51.0395 10.1795 50.7967 10.7655 50.3647 11.1976C49.9326 11.6297 49.3465 11.8724 48.7355 11.8724V37.2164C48.7355 38.4385 48.25 39.6106 47.3858 40.4748C46.5217 41.3389 45.3496 41.8244 44.1275 41.8244H32.4808L37.7638 47.1075C38.1835 47.542 38.4158 48.124 38.4105 48.7281C38.4053 49.3322 38.1629 49.9101 37.7358 50.3373C37.3086 50.7645 36.7307 51.0068 36.1266 51.012C35.5225 51.0173 34.9405 50.785 34.506 50.3653L27.9903 43.8496L21.4722 50.3653C21.0377 50.785 20.4557 51.0173 19.8516 51.012C19.2475 51.0068 18.6696 50.7645 18.2425 50.3373C17.8153 49.9101 17.573 49.3322 17.5677 48.7281C17.5625 48.124 17.7947 47.542 18.2144 47.1075L23.4975 41.8244H11.8715C10.6494 41.8244 9.47729 41.3389 8.61312 40.4748C7.74896 39.6106 7.26347 38.4385 7.26347 37.2164V11.8724C6.65241 11.8724 6.06638 11.6297 5.6343 11.1976C5.20221 10.7655 4.95947 10.1795 4.95947 9.5684C4.95947 8.95735 5.20221 8.37131 5.6343 7.93923C6.06638 7.50715 6.65241 7.2644 7.26347 7.2644H48.7355ZM44.1275 11.8724H11.8715V37.2164H44.1275V11.8724ZM41.0332 16.8767C41.4651 17.3088 41.7078 17.8947 41.7078 18.5056C41.7078 19.1166 41.4651 19.7025 41.0332 20.1346L31.2735 29.8943C30.8371 30.3304 30.2454 30.5755 29.6284 30.5755C29.0114 30.5755 28.4197 30.3304 27.9833 29.8943L23.115 25.0236L18.2282 29.9127C17.7959 30.345 17.2095 30.5879 16.5981 30.5879C15.9867 30.5879 15.4004 30.345 14.968 29.9127C14.5357 29.4804 14.2928 28.894 14.2928 28.2826C14.2928 27.9799 14.3525 27.6801 14.4683 27.4005C14.5842 27.1208 14.754 26.8666 14.968 26.6526L21.4699 20.1553C21.9063 19.7191 22.498 19.4741 23.115 19.4741C23.732 19.4741 24.3237 19.7191 24.76 20.1553L29.6284 25.0213L37.7753 16.8767C38.2074 16.4448 38.7933 16.2021 39.4043 16.2021C40.0152 16.2021 40.6011 16.4448 41.0332 16.8767Z" fill="#2C3D85" fill-opacity="0.2" />
                                 </g>
                                 <defs>
@@ -208,12 +207,12 @@ const Projects: React.FC = () => {
                         </div>
                         :
                         <>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 min-w-max">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 min-w-max p-5">
 
-                                {filteredProjects.map((card, index) => (
+                                {paginatedProjects.map((card, index) => (
 
-                                    <div className="w-full h-[323px] text-center p-4 border border-gray-300 hover:bg-bg-light rounded-[20px]">
-                                        <div key={card.id} className="flex">
+                                    <div key={card.id} className="w-full h-[323px] text-center p-4 border border-gray-300 hover:bg-bg-light rounded-[20px]">
+                                        <div  className="flex">
                                             <button
                                                 className='h-[20px] focus:outline-none'
                                                 onClick={() => handleToggle(index)}
@@ -268,7 +267,7 @@ const Projects: React.FC = () => {
                             </div>
                             <Pagination
                                 currentPage={currentPage}
-                                totalPages={10}
+                                totalPages={totalPages}
                                 onPageChange={setCurrentPage}
                             />
                         </>
