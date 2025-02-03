@@ -10,7 +10,28 @@ function App() {
        
         <h1 className='font-lufga  text-1xl'> {t('welcome')}  </h1>
         <h1 className='font-lufga  text-1xl'> {t('name')} </h1>
-    </>
+
+    
+          <div className='grid grid-cols-4 gap-10'>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+              <div className="w-full h-[300px] flex flex-col bg-black text-white "><h1>Div div DIv div</h1></div>
+
+              </div>
+              </>
   )
 }
 

@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "../App";
 import React from "react";
-import CoachLayout from "@layouts/Layout";
+import CoachLayout from "@layouts/CoachLayout";
 import InvitationManagement from "@pages/client-pages/InvitationManagement";
 const AppRouter : React.FC = () => {
 
@@ -14,13 +14,7 @@ const  router = createBrowserRouter([
              {path: "InvitationManagement", element: <InvitationManagement/>}
         ]
     },
-    {
-        path : "/invt",
-        element : <InvitationManagement/>,
-        children : [
-            
-        ]
-    }
+
 ]);
 
 return (

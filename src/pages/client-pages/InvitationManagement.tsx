@@ -108,7 +108,7 @@ const InvitationManagement: React.FC = () => {
             newSelected.add(id);
         }
         setSelectedGuests(newSelected);
-    };4.75
+    };
     return (
             <div className="bg-[#ECFEE2] shadow-custom-blue bg-opacity-[25%] w-full h-full rounded-[40px]   ">
                 <div className="sm:grid sm:grid-rows lg:grid lg:grid-cols-[64.63%_35.37%]  border-black w-full py-10 px-[34px]">
@@ -164,9 +164,12 @@ const InvitationManagement: React.FC = () => {
 
                     </button> */}
                  </div>   
-                     <div className="justify-between p-10  bg-white rounded-[40px] ">
+                     <div className="justify-between p-10  bg-white h-[77.8%] rounded-[40px] ">
+                     <div className="overflow-x-auto w-full">
+                     <div className="min-w-[1000px] max-w-full">
+
                      <div className="grid grid-cols ">
-                         <div className="flex flex-wrap gap-2 justify-between items-center p-4 bg-[#7C829C] bg-opacity-[5%]  rounded-[30px] max-md:max-w-full">
+                         <div className="flex flex-wrap gap-2 justify-between items-center p-4 bg-[#7C829C] bg-opacity-[5%]   rounded-[30px] min-w-[90%]">
                              <button className="flex justify-center items-center self-stretch my-auto w-[77px]">
                                  <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                      <path fillRule="evenodd" clipRule="evenodd" d="M9.33838 0.436035C9.67687 0.436123 10.0068 0.54271 10.2813 0.740699C10.5559 0.938688 10.7612 1.21804 10.8681 1.53919L11.306 2.85524H13.951C14.1649 2.85524 14.37 2.9402 14.5212 3.09142C14.6724 3.24265 14.7574 3.44776 14.7574 3.66164C14.7574 3.87551 14.6724 4.08062 14.5212 4.23185C14.37 4.38308 14.1649 4.46804 13.951 4.46804H13.1446V14.1448C13.1446 14.7864 12.8897 15.4018 12.436 15.8555C11.9823 16.3092 11.367 16.564 10.7254 16.564H4.27419C3.63258 16.564 3.01724 16.3092 2.56355 15.8555C2.10987 15.4018 1.85499 14.7864 1.85499 14.1448V4.46804H1.04859C0.834717 4.46804 0.629606 4.38308 0.478377 4.23185C0.327147 4.08062 0.242188 3.87551 0.242188 3.66164C0.242188 3.44776 0.327147 3.24265 0.478377 3.09142C0.629606 2.9402 0.834717 2.85524 1.04859 2.85524H3.69358L4.13145 1.53919C4.23846 1.21791 4.44388 0.938464 4.71859 0.740463C4.99331 0.542462 5.32337 0.435954 5.662 0.436035H9.33838ZM11.5318 4.46804H3.46779V14.1448C3.46779 14.3587 3.55275 14.5638 3.70398 14.715C3.85521 14.8663 4.06032 14.9512 4.27419 14.9512H10.7254C10.9393 14.9512 11.1444 14.8663 11.2956 14.715C11.4468 14.5638 11.5318 14.3587 11.5318 14.1448V4.46804ZM9.33838 2.04884H5.6612L5.39266 2.85524H9.60691L9.33838 2.04884Z" fill="#FC5185" />
@@ -192,7 +195,7 @@ const InvitationManagement: React.FC = () => {
                                  Action
                              </div>
                          </div>
-                                 {currentGuests.length === 0 && <div className="flex flex-col p-[30px] items-center self-center w-full max-w-[745px] h-full max-h-[275px]  ">
+                                 {currentGuests.length === 0 && <div className="flex flex-col p-[30px] items-center self-center mx-auto w-full max-w-[745px] h-full max-h-[275px]  ">
                                      <svg  width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                                          <path d="M51.4691 8.9772C51.9217 8.86016 52.3977 8.87019 52.8449 9.00618C53.2921 9.14216 53.6932 9.39884 54.004 9.74799C54.3148 10.0971 54.5233 10.5252 54.6065 10.9852C54.6898 11.4451 54.6446 11.9191 54.4759 12.3551L39.2259 51.7509C39.0751 52.1411 38.8303 52.488 38.5132 52.7609C38.1961 53.0338 37.8166 53.2242 37.4082 53.3152C36.9999 53.4062 36.5755 53.395 36.1725 53.2826C35.7695 53.1703 35.4005 52.9602 35.0983 52.671L26.5023 44.4487L23.4447 47.5038C21.8282 49.1203 19.0629 47.9765 19.0629 45.689V37.332L5.8691 24.7127C5.54174 24.3995 5.30404 24.0045 5.18062 23.5686C5.05719 23.1327 5.05252 22.6717 5.16709 22.2334C5.28166 21.795 5.5113 21.3953 5.83225 21.0756C6.15319 20.7558 6.55377 20.5276 6.99251 20.4147L51.4691 8.9772ZM46.096 19.9191L25.7678 36.7119L35.8582 46.3651L46.096 19.9191ZM42.0853 16.6403L12.6858 24.1967L22.0697 33.1688L42.0853 16.6352V16.6403Z" fill="#2C3D85" fill-opacity="0.2" />
                                      </svg>
@@ -201,7 +204,8 @@ const InvitationManagement: React.FC = () => {
                                      <div className="text-center pt-[10px] text-[15px]"><a href="/" className="font-lufga text-[#193AF9] pt-[10px] font-semibold ">Create New</a></div>
                                  </div>}
 
-                         {currentGuests.length != 0 && <div className="flex flex-col mt-5 w-full max-md:max-w-full">
+                         {currentGuests.length != 0 && 
+                         <div className="flex flex-col mt-5 w-full max-md:max-w-full">
                                  {currentGuests.map((guest) => (
                                 <GuestRow
                                     key={guest.id}
@@ -210,15 +214,22 @@ const InvitationManagement: React.FC = () => {
                                     onSelect={handleGuestSelect}
                                 />
                             ))}
-                            <Pagination
+
+                           
+
+                        </div>}
+                        
+                    </div>
+                    
+                    </div>
+                    
+                </div>                 
+                <Pagination
                                 currentPage={currentPage}
                                 totalPages={10}
                                 onPageChange={setCurrentPage}
-                            />
-
-                        </div>}
-                    </div>
-                </div>                 
+                            />                
+                </div> 
                  </div>
                     
         
