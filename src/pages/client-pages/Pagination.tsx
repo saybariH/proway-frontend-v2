@@ -23,7 +23,7 @@ export const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages,
             key={index}
             onClick={() => typeof page === 'number' && onPageChange(page)}
             className={`self-stretch my-auto text-sm text-center whitespace-nowrap rounded-md h-[25px] min-h-[25px] w-[25px] 
-              ${currentPage === page ? 'bg-blue-700 text-white' : 'bg-slate-500 bg-opacity-10 text-slate-900'}`}
+              ${currentPage === page ? 'bg-blue text-white' : 'bg-slate-500 bg-opacity-10 text-slate-900'}`}
           >
             {page}
           </button>

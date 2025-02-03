@@ -13,6 +13,13 @@ const  router = createBrowserRouter([
              {index : true, element : <App/>},
              {path: "InvitationManagement", element: <InvitationManagement/>}
         ]
+    },
+    {
+        path : "/invt",
+        element : <InvitationManagement/>,
+        children : [
+            
+        ]
     }
 ]);
 

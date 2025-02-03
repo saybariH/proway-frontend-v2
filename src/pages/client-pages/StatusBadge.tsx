@@ -3,9 +3,9 @@ import { StatusBadgeProps } from './InvitationManagement';
 
 export const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   const styles = {
-    Registred: 'bg-green-100 text-emerald-700',
-    Pending: 'bg-[#FFD9BF] text-[#EC8200]',
-    Incomplet: 'bg-[#E51638] bg-opacity-10 text-[#FC5185]'
+    Registred: 'bg-bg-green text-green',
+    Pending: 'bg-bg-orange text-orange',
+    Incomplet: 'bg-[#E51638] bg-opacity-10 text-red'
   };
 
   return (
