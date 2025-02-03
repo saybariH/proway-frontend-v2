@@ -2,9 +2,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "../App";
 import React from "react";
-import CoachLayout from "@layouts/Layout";
+import CoachLayout from "@layouts/CoachLayout";
 import Projects from "@pages/coach-pages/Projects";
-
 const AppRouter : React.FC = () => {
 
 const  router = createBrowserRouter([
@@ -12,17 +11,10 @@ const  router = createBrowserRouter([
         path : "/",
         element : <CoachLayout/>,
         children : [
-             {index : true, element : <App/>}
+             {index : true, element : <App/>},
+             {path : "projects", element : <Projects/>}
         ],
-    },
-    {
-        path : "/projects",
-        element : <CoachLayout/>,
-        children : [
-             {index : true, element : <Projects/>}
-        ]
     }
-
 ]);
 
 return (
