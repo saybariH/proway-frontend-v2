@@ -1,4 +1,4 @@
-import NavBar from "@components/coach-components/Navbar";
+import NavBar from "@components/common/navbar/Navbar";
 import { Outlet } from "react-router";
 
 const CoachLayout: React.FC = () => {

@@ -7,8 +7,11 @@ export default {
       fontFamily: {
         'lufga':'Lufga'
       },
+      boxShadow: {
+        'custom-blue': '0 0 50px 0 rgba(25, 58, 249, 0.08)', // Ombre personnalisée
+      },
       backgroundImage: {
-        'bg-gradient' : 'radial-gradient(circle, #FFF8F6 0%, #E2F0FF 23%, #F6FAFF 57%, #F4F9FF 100%)',
+        'bg-gradient' : 'radial-gradient(circle at 120% 50%, #FFF8F6 -10%, #E2F0FF 10%, #F6FAFF 57%, #F4F9FF 100%)',
       },
       colors: {
          primary: "#2139EE",
