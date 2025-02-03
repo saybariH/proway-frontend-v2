@@ -7,6 +7,9 @@ export default {
       fontFamily: {
         'lufga':'Lufga'
       },
+      backgroundImage: {
+        'bg-gradient' : 'radial-gradient(circle, #FFF8F6 0%, #E2F0FF 23%, #F6FAFF 57%, #F4F9FF 100%)',
+      },
       colors: {
          primary: "#2139EE",
          secondary:"#090933",
@@ -21,13 +24,11 @@ export default {
          orange: '#EC8200'
       },
         width: {
-          'custom': '1728px',
-          'sidebar': '20%',  
-          'content': '80%',
+          'custom': '1728px'
         },
     },
   },
   plugins: [
-
+ 
   ],
 };
