@@ -2,7 +2,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "../App";
 import React from "react";
-import CoachLayout from "@layouts/Layout";
+import CoachLayout from "@layouts/CoachLayout";
 const AppRouter : React.FC = () => {
 
 const  router = createBrowserRouter([
