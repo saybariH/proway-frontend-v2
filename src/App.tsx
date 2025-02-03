@@ -2,8 +2,11 @@ import logoBlue from '@assets/images/logo-blue.svg'
 import { useTranslation } from 'react-i18next';
 
 function App() {
+<<<<<<< HEAD
   const { t , i18n } = useTranslation('translation');
   console.log(i18n.language)
+=======
+>>>>>>> e31231a598b01afc35fe6d0e207a77dc55023cac
   return (
     <>
           <img src={logoBlue} className="logo" alt="Vite logo" />

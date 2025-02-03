@@ -3,6 +3,7 @@ import App from "../App";
 import React from "react";
 import CoachLayout from "@layouts/CoachLayout";
 import InvitationManagement from "@pages/client-pages/InvitationManagement";
+import Projects from "@pages/coach-pages/Projects";
 const AppRouter : React.FC = () => {
 
 const  router = createBrowserRouter([
@@ -11,8 +12,9 @@ const  router = createBrowserRouter([
         element : <CoachLayout/>,
         children : [
              {index : true, element : <App/>},
-             {path: "InvitationManagement", element: <InvitationManagement/>}
-        ]
+             {path: "InvitationManagement", element: <InvitationManagement/>},
+             {path : "projects", element : <Projects/>}
+        ],
     },
 
 ]);
