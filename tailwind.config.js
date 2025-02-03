@@ -18,6 +18,7 @@ export default {
         'bg-green':'#DEF4F0',
         'bg-orange':'#FFD9BF',
         'bg-red':'#F5C5C5',
+        white25: 'rgba(255, 255, 255, 0.25)',
          blue:'#0047EC',
          green:'#028361',
          red: '#FC5185',

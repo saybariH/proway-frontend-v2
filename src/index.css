@@ -23,3 +23,12 @@
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Lufga';
+    src: url('/font/Lufga-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/font/Lufga-Regular.woff2') format('woff2'),
+        url('/font/Lufga-Regular.woff') format('woff'),
+        url('/font/Lufga-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

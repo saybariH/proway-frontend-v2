@@ -10,11 +10,11 @@ const CoachLayout: React.FC = () => {
           <h1 className="text-white">LEFT SIDE</h1>
         </div>
 
-        <div className="bg-blue grid grid-rows-[8%_90%] gap-[2%] h-full overflow-hidden">
-          <div className="bg-green">
+        <div className=" grid grid-rows-[auto_1fr] gap-[2%] h-full overflow-hidden">
+          <div className="w-full h-full">
             <NavBar />
           </div>
-          <div className="overflow-auto">
+          <div className="w-full h-full overflow-auto">
             <Outlet />
           </div>
         </div>
