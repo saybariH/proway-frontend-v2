@@ -19,7 +19,6 @@ const ActionButtons = () => {
                     </svg>
                 </Link>
             </div>
-
             {/* Notification **/}
             <div className="w-[55px] h-[55px] relative group">
                 <span className="w-[15px] h-[15px] absolute top-0 right-0 bg-primary rounded-full group-hover:hidden" />
@@ -34,8 +33,6 @@ const ActionButtons = () => {
                     </svg>
                 </button>
             </div>
-
-
             {/* Profile **/}
             <button className="w-auto h-auto flex flex-row items-center gap-5">
                 <img src="/public/images/profile-img1.png" alt="Profile" className="w-[55px] h-[55px] rounded-full" />
