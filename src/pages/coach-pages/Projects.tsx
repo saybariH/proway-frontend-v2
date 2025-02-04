@@ -24,7 +24,19 @@ const Projects: React.FC = () => {
     const [searchQuery, setSearchQuery] = useState("");
     //Pagination
     const [currentPage, setCurrentPage] = React.useState(1);
-    const [guestsPerPage] = React.useState(8); // Nombre de projects
+    // Nombre de projects
+    const [guestsPerPage, setGuestsPerPage] = React.useState(
+        window.innerWidth < 640 ? 4 : 8
+      ); 
+      React.useEffect(() => {
+        const updateGuestsPerPage = () => {
+          setGuestsPerPage(window.innerWidth < 640 ? 4 : 8);
+        };
+      
+        window.addEventListener("resize", updateGuestsPerPage);
+        return () => window.removeEventListener("resize", updateGuestsPerPage);
+      }, []);
+    
     const indexOfLastGuest = currentPage * guestsPerPage;
     const indexOfFirstGuest = indexOfLastGuest - guestsPerPage;
     const cards: Card[] = [
@@ -162,10 +174,10 @@ const Projects: React.FC = () => {
 
     return (
         <>
-            <div className="w-full bg-white p-[30px] font-lufga rounded-[40px]">
+            <div className="w-full bg-white shadow-custom-blue p-[30px] font-lufga rounded-[40px]">
                 <div className="w-full flex flex-col md:flex-row items-center justify-between">
                     <div className="flex items-start gap-[20px] justify-center mb-2">
-                        <div className='flex bg-gray-100 items-center justify-center rounded-full p-3 max-h-[55px] max-w-[55px]'>
+                        <div className='flex bg-gray-100 items-center justify-center rounded-full p-3 h-[55px] w-[55px]'>
                             <HiOutlinePresentationChartLine className="text-primary w-[27px] h-[27px]" />
                         </div>
                         <div>
@@ -207,7 +219,7 @@ const Projects: React.FC = () => {
                         </div>
                         :
                         <>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 min-w-max p-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 min-w-max p-0 mt-5">
 
                                 {paginatedProjects.map((card, index) => (
 
