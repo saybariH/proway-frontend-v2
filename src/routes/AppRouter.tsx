@@ -1,11 +1,12 @@
-
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "../App";
 import React from "react";
-import CoachLayout from "@layouts/Layout";
+import CoachLayout from "@layouts/CoachLayout";
+import InvitationManagement from "@pages/client-pages/InvitationManagement";
+import Projects from "@pages/coach-pages/Projects";
+import ProfileCoach from "@pages/coach-pages/ProfileCoach";
 import ForgetPassword from "@pages/ForgetPassword";
 import ResetPassword from "@pages/ResetPassword";
-import ProfileCoach from "@pages/coach-pages/ProfileCoach";
 const AppRouter : React.FC = () => {
 
 const  router = createBrowserRouter([
@@ -14,7 +15,10 @@ const  router = createBrowserRouter([
         element : <CoachLayout/>,
         children : [
              {index : true, element : <App/>},
-             {     path : "/ProfileCoach", element : <ProfileCoach/>,}
+             {path: "InvitationManagement", element: <InvitationManagement/>},
+             {path : "projects", element : <Projects/>},
+             {path : "ProfileCoach", element : <ProfileCoach/>}
+
         ],
         
     },
@@ -24,20 +28,13 @@ const  router = createBrowserRouter([
         children : [
  
         ]
-    },
-    {
+    },  {
         path : "/ResetPassword",
-        element : <ResetPassword/>,
+        element : <ResetPassword />,
         children : [
  
-        ]    },
-            //  {
-            //      path : "/ProfileCoach",
-            //     element : <ProfileCoach/>,
-            // children : [
-        
-            //    ]
-            // }
+        ]
+    }
 ]);
 
 return (
