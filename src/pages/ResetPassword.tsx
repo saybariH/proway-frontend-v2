@@ -65,7 +65,7 @@ const ResetPassword: React.FC = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     className={`mt-1 sm:mt-2 block w-full rounded-lg border ${
                       !isValidPassword(password) && password.length > 0 
-                        ? "border-[#FC5185] bg-[#E51638]/10" 
+                        ? "border-[#FC5185] bg-[#E51638]/10 text-[#FC5185]" 
                         : "border-gray-300"
                     } shadow-sm font-[lufga] focus:border-blue-500 focus:ring-blue-500 px-2 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 bg-white appearance-none [&::-ms-reveal]:hidden [&::-ms-clear]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden [&::-webkit-credentials-auto-fill-button]:hidden text-xs sm:text-sm md:text-base`}
                     placeholder="Entrez le nouveau mot de passe"
@@ -88,7 +88,7 @@ const ResetPassword: React.FC = () => {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     className={`mt-1 sm:mt-2 block w-full rounded-lg border ${
                       confirmPassword && confirmPassword !== password 
-                      ? "border-[#FC5185] bg-[#E51638]/10" 
+                      ? "border-[#FC5185] bg-[#E51638]/10 text-[#FC5185]" 
                       : "border-gray-300"
                     } shadow-sm font-[lufga] focus:border-blue-500 focus:ring-blue-500 px-2 py-2 sm:px-3 sm:py-2 md:px-4 md:py-3 bg-white appearance-none [&::-ms-reveal]:hidden [&::-ms-clear]:hidden [&::-webkit-inner-spin-button]:hidden [&::-webkit-outer-spin-button]:hidden [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden [&::-webkit-credentials-auto-fill-button]:hidden text-xs sm:text-sm md:text-base`}
                     placeholder="Confirmez le mot de passe"

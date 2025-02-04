@@ -46,7 +46,7 @@ const ForgotPassword: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className={`mt-1 block w-full rounded-lg border ${
-                    error ? "border-[#FC5185] bg-[#E51638]/10" : "border-gray-300"
+                    error ? "border-[#FC5185] bg-[#E51638]/10 text-[#FC5185]" : "border-gray-300"
                   } shadow-sm focus:border-blue-500 focus:ring-blue-500 px-3 py-2 font-[lufga] md:px-4 md:py-3`}
                   placeholder="Entrez votre email"
                 />
