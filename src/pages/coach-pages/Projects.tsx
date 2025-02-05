@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaRegEye } from "react-icons/fa";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { TbCircleArrowUpRight } from 'react-icons/tb';
 import { IoSearch } from "react-icons/io5";
@@ -255,7 +254,7 @@ const Projects: React.FC = () => {
 
                                     </div>
                                     <p className='font-semibold text-[22px] text-secondary'>{card.name}</p>
-                                    <span className='text-gray-500 text-[12px]'>{card.position}</span>
+                                    <span className='text-gray text-[12px]'>{card.position}</span>
                                     <div
                                         className={`font-lufga px-3 py-2 gap-1 max-w-[103px] rounded-[40px] mt-4 mx-auto flex items-center justify-center 
                                         ${card.status === 'In Progress' ? 'bg-bg-blue text-blue' : 'bg-bg-green text-green'}`}
@@ -285,7 +284,7 @@ const Projects: React.FC = () => {
 
                                     <div className='flex items-center justify-between text-primary font-lufga font-medium mt-4'>
                                         <span className='text-[16px]'>5/32</span>
-                                        <div className='w-[50%] bg-gray-200 rounded-full h-1.5'>
+                                        <div className='w-[50%] bg-[#2C3D85]/20 rounded-full h-1.5'>
                                             <div className='w-[74%] bg-primary h-1.5 rounded-full'></div>
                                         </div>
                                         <span className='text-[10px]'>74% Completed</span>
