@@ -74,7 +74,7 @@ const ProfileCoach = () => {
     {/* Phone Number Section */}
     <div className="mb-6 flex items-center">
         <label className="text-[#7C829C] text-[22px]  w-[300px] h-[29px] font-[lufga]">Phone Number</label>
-        <div className="flex items-center w-[600px] h-[65px]  border rounded-lg p-3 bg-[#7C829C]/5">
+        <div className="flex items-center w-[600px] h-[65px]   rounded-lg p-3 bg-[#7C829C]/5">
           <select className="w-1/5 border-none text-[20px] text-[#193AF9] outline-none bg-transparent">
           <option value="+1">+1 </option>
           <option value="+7">+7 </option>
@@ -146,13 +146,13 @@ const ProfileCoach = () => {
       {/* Email Section */}
       <div className="mb-6 flex items-center   ">
         <label className="text-[#7C829C] font-[lufga] text-[22px] w-[300px] h-[29px] ">Email</label>
-        <input type="email" placeholder="eg. username@proway.ai" className="w-[600px] h-[65px] flex items-center  border font-[lufga] rounded-lg bg-[#7C829C]/5" />
+        <input type="email" placeholder="eg. username@proway.ai" className="w-[600px] h-[65px] flex items-center   font-[lufga] rounded-lg bg-[#7C829C]/5" />
       </div>
 
       {/* Description Section */}
       <div className="mb-6 flex items-center">
         <label className="text-[#7C829C] font-[lufga] dark:text-gray-300 text-[22px] w-[300px] h-[29px]">Description</label>
-        <textarea placeholder="Please enter description here..." className=" p-3 w-[600px] h-[222px] flex items-center  border font-[lufga] rounded-lg bg-[#7C829C]/5 h-28 border-blue-400"></textarea>
+        <textarea placeholder="Please enter description here..." className=" p-3 w-[600px] h-[222px] flex items-center   font-[lufga] rounded-lg bg-[#7C829C]/5 h-28 border-blue-400"></textarea>
       </div>
     
       {/* Security Section */}
@@ -169,7 +169,7 @@ const ProfileCoach = () => {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className={`w-[600px] h-[65px] p-3  border rounded-lg bg-[#7C829C]/5 pr-10 ${
+              className={`w-[600px] h-[65px] p-3   rounded-lg bg-[#7C829C]/5 pr-10 ${
                 !isValidPassword(password) && password.length > 0
                   ? "border-[#FC5185] text-[#FC5185] bg-[#FC5185]/10"
                   : "border-gray-300"
@@ -205,7 +205,7 @@ const ProfileCoach = () => {
               placeholder="Confirm Password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className={`w-full p-3 border rounded-lg bg-[#7C829C]/5 w-[600px] h-[65px] pr-10 ${
+              className={`w-full p-3  rounded-lg bg-[#7C829C]/5 w-[600px] h-[65px] pr-10 ${
                 confirmPassword && confirmPassword !== password
                 ? "border-[#FC5185] text-[#FC5185] bg-[#FC5185]/10"
                 : "border-[#7C829C]/5 "
@@ -293,7 +293,7 @@ const ProfileCoach = () => {
         <p className="text-[16px] w-[1288px] h-[21px] text-[#7C829C] mb-6 font-[lufga]">Lorem ipsum is here</p>
         <div className="mb-6 flex items-center ">
           <label className="text-[#7C829C] font-[lufga] text-[22px] w-[300px] h-[29px]">Region</label>
-          <select className="flex w-[600px] h-[65px] p-3 border rounded-lg bg-[#7C829C]/5  ">
+          <select className="flex w-[600px] h-[65px] p-3  rounded-lg bg-[#7C829C]/5  ">
             <option>Select your region</option>
             <option>Afghanistan</option>
             <option>Afrique du Sud</option>
@@ -481,7 +481,7 @@ const ProfileCoach = () => {
         </div>
         <div className="mb-6 flex items-center ">
           <label className="text-[#7C829C]  font-[lufga] text-[22px] w-[300px] h-[29px]w-1/4">Language</label>
-          <select className="flex p-3 border w-[600px] h-[65px]  rounded-lg bg-[#7C829C]/5">
+          <select className="flex p-3  w-[600px] h-[65px]  rounded-lg bg-[#7C829C]/5">
             <option>English</option>
             <option>French</option>
             <option>Spanish</option>
@@ -490,8 +490,8 @@ const ProfileCoach = () => {
       </div>
         {/* Appearances Section */}
         <div className="mt-10 ">
-        <h2 className="text-[36px] font-[lufga] font-medium  text-[#090933] w-[1288px] h-[47px]">Appearances</h2>
-        <p className="text-[#7C829C] font-[lufga] text-[16px] mb-2 w-[1288px] h-[21px]">Would you have to change the appearances of light and switch it to dark mode, light mode.</p>
+        <h2 className="text-[36px] font-[lufga] font-medium  text-[#090933] w-[1288px] h-[60px]">Appearances</h2>
+        <p className="text-[#7C829C] font-[lufga] text-[16px] mb-2 w-[1288px] h-[30px]">Would you have to change the appearances of light and switch it to dark mode, light mode.</p>
         <div className="flex items-center space-x-6 mb-4">
           <div className="w-[300px] h-[265px]">
             <label className="text-[#7C829C] font-[lufga] w-[300px] h-[29px] text-[16px]">Appearances</label>
