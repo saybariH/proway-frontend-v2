@@ -4,7 +4,8 @@ const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(false);
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.includes("@")) {
@@ -12,8 +13,13 @@ const ForgotPassword: React.FC = () => {
       return;
     }
     setError("");
-    setSuccess(true);
+    setIsLoading(true);
+    setTimeout(() => {
+      setSuccess(true);
+      setIsLoading(false);
+    }, 2000); // Simulation du chargement
   };
+  
 
   return (
     <div className="min-h-screen w-full flex flex-col justify-between bg-white">
@@ -41,24 +47,44 @@ const ForgotPassword: React.FC = () => {
             <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4 px-4">
               <div className="text-left">
                 <label className="block text-sm font-[lufga] font-medium text-[#7C829C]">Email</label>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className={`mt-1 block w-full rounded-lg border ${
-                    error ? "border-[#FC5185] bg-[#E51638]/10 text-[#FC5185]" : "border-gray-300"
-                  } shadow-sm focus:border-blue-500 focus:ring-blue-500 px-3 py-2 font-[lufga] md:px-4 md:py-3`}
-                  placeholder="Entrez votre email"
-                />
+                <div className="relative">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={`mt-1 block w-full rounded-lg border pl-3 pr-10 ${
+                      error ? "border-[#FC5185] bg-[#E51638]/10 text-[#FC5185]" : "border-gray-300"
+                    } shadow-sm focus:border-blue-500 focus:ring-blue-500 px-3 py-2 font-[lufga] md:px-4 md:py-3`}
+                    placeholder="Entrez votre email"
+                  />
+                  {email.includes("@") && (
+                    <img src="src/assets/images/verifie.svg" alt="Valid Email" className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5" />
+                  )}
+                </div>
+                
                 {error && <p className="text-[#FC5185] font-[lufga] text-sm mt-2">{error}</p>}
               </div>
 
-              <button
+             <button
                 type="submit"
-                className="w-full py-2 md:py-3 font-[lufga] rounded-lg bg-[#7C829C] text-white text-base md:text-lg hover:bg-gray-500 transition-all"
+                disabled={isLoading}
+                className={`w-full py-3 font-[lufga] rounded-lg text-white text-base md:text-lg transition-all 
+                ${success ? "bg-gray-500" : "bg-[#193AF9] hover:bg-blue-600"} 
+                ${isLoading ? "flex justify-center items-center" : ""}`}
               >
-                Continuer
+                {isLoading ? (
+                  <div className="flex items-center justify-center">
+                    <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0116 0h-4l5 5 5-5h-4a8 8 0 01-16 0z"></path>
+                    </svg>
+                    Continuer
+                  </div>
+                ) : (
+                  "Continuer"
+                )}
               </button>
+
             </form>
 
             {error && <p className="text-[#FC5185] mt-4 text-sm">Désolé, cet utilisateur n'existe pas !</p>}

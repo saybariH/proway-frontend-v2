@@ -12,22 +12,22 @@ const ProfileCoach = () => {
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-xl text-[#090933] font-[lufga]  ">General</h2>
         <div className="space-x-4">
-        <button className="px-6 py-2 rounded-full border text-[#FC5185] bg-pink-100 hover:bg-pink-200 transition font-[lufga]">Cancel</button>
-        <button className="px-6 py-2 rounded-full bg-[#193AF9] text-white hover:bg-[#193AF9] transition font-[lufga]">Save</button>
+        <button className="px-6 py-2 rounded-full text-[#FC5185] bg-[#E51638]/10 hover:bg-[#E51638]/20 transition font-[lufga]">Cancel</button>
+        <button className="px-6 py-2 rounded-full bg-[#193AF9] text-white hover:bg-[#0F2AC9] transition font-[lufga]">Save</button>
         </div>
       </div>
 
       {/* Avatar Section */}
       <div className="mb-8 flex items-center space-x-6">
         <div className="w-1/4">
-        <label className="text-[#7C829C] text-sm w-1/4 font-[lufga]">Avatar</label>
+        <label className="text-[#7C829C] text-base w-1/4 font-[lufga]">Avatar</label>
           <p className="text-xs text-[#7C829C]  ">Lorem ipsum is here</p>
         </div>
         <div className="flex-1 flex items-center space-x-6">
-          <img src="src/assets/images/avatar.svg" alt="Avatar" className="w-158 h-158 rounded-lg object-cover  font-[lufga]" />
+          <img src="public/images/avatar.svg" alt="Avatar" className="w-158 h-158 rounded-lg object-cover  font-[lufga]" />
           <div className="flex flex-col space-y-2">
             <button className="flex items-center px-5 py-2 rounded-full border border-gray-300 font-[lufga] text-gray-700 hover:bg-gray-100 transition">
-              <FaUpload className="mr-2" /> Upload
+              <FaUpload className="mr-2 " /> Upload
             </button>
             <span className="text-xs font-[lufga] text-[#7C829C]">Upload a picture (PNG, JPEG)</span>
             <div className="flex space-x-2">
@@ -39,16 +39,23 @@ const ProfileCoach = () => {
       </div>
 
         
-    {/* Username Section */}
-    <div className="mb-6 flex items-center">
-        <label className="text-[#7C829C] font-[lufga] text-sm w-1/4">Username</label>
-        <div className="flex-1 flex font-[lufga]  rounded-lg overflow-hidden border border-[#2C3D85]/20">
-          <span className="px-4 py-3 bg-[#4772FF]/10 font-[lufga]  border border-[#2C3D85]/20 text-[#090933] font-medium flex items-center justify-center w-1/4">Proway.ai/</span>
-          <div className="w-3/4">
-            <input type="text" placeholder="@username" className="w-full bg-transparent font-[lufga] outline-none p-3 text-lg" />
-          </div>
+          {/* Username Section */}
+      <div className="mb-6 flex items-center">
+        <label className="text-[#7C829C] font-[lufga] text-sm w-1/4">
+          Username
+        </label>
+        <div className="flex-1 flex rounded-full overflow-hidden border border-[#2C3D85]/20">
+          <span className="px-4 py-2 bg-[#4772FF]/10 font-[lufga] text-[#090933] font-medium flex items-center justify-center w-1/3">
+            Proway.ai/
+          </span>
+          <input
+            type="text"
+            placeholder="@username"
+            className="w-2/3 bg-transparent font-[lufga] outline-none px-3 py-2 text-[#090933]"
+          />
         </div>
       </div>
+
 
 
     {/* Phone Number Section */}
@@ -56,7 +63,7 @@ const ProfileCoach = () => {
         <label className="text-[#7C829C] text-sm w-1/4 font-[lufga]">Phone Number</label>
         <div className="flex-1 flex items-center bg-[#7C829C]/10 font-[lufga] rounded-lg p-3">
           <select className="w-1/6 border-none bg-transparent font-semibold text-[#193AF9] font-[lufga] outline-none text-center">
-            <option value="+970">+970</option>
+            <option value="+970">+970 </option>
             <option value="+1">+1</option>
             <option value="+33">+33</option>
             <option value="+44">+44</option>
