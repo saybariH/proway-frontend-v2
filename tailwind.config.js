@@ -25,7 +25,8 @@ export default {
          blue:'#0047EC',
          green:'#028361',
          red: '#FC5185',
-         orange: '#EC8200'
+         orange: '#EC8200',
+         gray : '#7C829C'
       },
         width: {
           'custom': '1728px'
