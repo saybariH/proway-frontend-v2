@@ -3,13 +3,13 @@ const RecentInvites = () => {
         <div className="w-auto h-auto flex flex-row items-center gap-2.5">
                 <div className="w-auto h-auto flex flex-row items-center -space-x-[17px]">
                     <div className="w-[55px] h-[55px] rounded-full bg-white border-2 border-white justify-center items-center flex">
-                        <img src="/public/images/profile-img1.png" alt="Profile" className="w-full h-full rounded-full" />
+                        <img src="/images/profile-img1.png" alt="Profile" className="w-full h-full rounded-full" />
                     </div>
                     <div className="w-[55px] h-[55px] rounded-full bg-white border-2 border-white  justify-center items-center flex">
-                        <img src="/public/images/profile-img2.png" alt="Profile" className="w-full h-full rounded-full" />
+                        <img src="/images/profile-img2.png" alt="Profile" className="w-full h-full rounded-full" />
                     </div>
                     <div className="w-[55px] h-[55px] rounded-full bg-white border-2 border-white  justify-center items-center flex">
-                        <img src="/public/images/profile-img3.png" alt="Profile" className="w-full h-full  rounded-full" />
+                        <img src="/images/profile-img3.png" alt="Profile" className="w-full h-full  rounded-full" />
                     </div>
                 </div>
                 <button className="w-[192px] h-[55px] bg-primary rounded-[50px] p-[20px]  flex flex-row items-center justify-center gap-2.5 ">
