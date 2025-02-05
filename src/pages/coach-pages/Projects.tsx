@@ -173,8 +173,7 @@ const Projects: React.FC = () => {
 
 
     return (
-        <>
-            <div className="w-full bg-white shadow-custom-blue p-[30px] font-lufga rounded-[40px]">
+            <div className="w-full bg-white p-[30px] font-lufga rounded-[40px]">
                 <div className="w-full flex flex-col md:flex-row items-center justify-between">
                     <div className="flex items-start gap-[20px] justify-center mb-2">
                         <div className='flex bg-gray-100 items-center justify-center rounded-full p-3 h-[55px] w-[55px]'>
@@ -197,7 +196,7 @@ const Projects: React.FC = () => {
                             placeholder="Search by name, email"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-[70vw] sm:max-w-[370px] h-[55px] font-lufga sm:text-[12px] md:text-[18px] text-gray-200 pl-16 rounded-[15px] border-none focus:outline-none bg-gray-100"
+                            className="w-[70vw] sm:max-w-[370px] h-[55px] font-lufga sm:text-[12px] md:text-[18px] text-gray-200 pl-16 rounded-[15px] border-none focus:outline-none bg-[#7C829C]/5"
                         />
                     </div>
                 </div>
@@ -223,7 +222,7 @@ const Projects: React.FC = () => {
 
                                 {paginatedProjects.map((card, index) => (
 
-                                    <div key={card.id} className="w-full h-[323px] text-center p-4 border border-gray-300 hover:bg-bg-light rounded-[20px]">
+                                    <div key={card.id} className="w-full h-[323px] text-center p-4 border border-[#2C3D85]/20 hover:bg-bg-light rounded-[20px]">
                                         <div  className="flex">
                                             <button
                                                 className='h-[20px] focus:outline-none'
@@ -270,7 +269,7 @@ const Projects: React.FC = () => {
                                             <span className='text-[10px]'>74% Completed</span>
                                         </div>
 
-                                        <div className='w-full max-w-[165px] font-lufga flex items-center bg-gray-100 mx-auto text-primary rounded-[5px] mt-4 gap-[5px] pl-2'>
+                                        <div className='w-full max-w-[165px] font-lufga flex items-center bg-[#7288E9]/5 mx-auto text-primary rounded-[5px] mt-4 gap-[5px] pl-2'>
                                             <MdOutlineAccessTime className='w-[13px]' />
                                             <span className='text-[10px]'>Last updated: 15 Jan, 2025</span>
                                         </div>
@@ -287,8 +286,6 @@ const Projects: React.FC = () => {
 
                 </div>
             </div>
-
-        </>
     )
 
 
