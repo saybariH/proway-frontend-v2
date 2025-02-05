@@ -15,7 +15,7 @@ const CoachLayout: React.FC = () => {
           <div className="w-full h-full">
             <NavBar />
           </div>
-          <div className="w-full h-full overflow-auto bg-slate-200">
+          <div className="w-full h-full overflow-auto">
             <Outlet />
           </div>
         </div>
